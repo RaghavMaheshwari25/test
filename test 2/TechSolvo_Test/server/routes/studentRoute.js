@@ -1,0 +1,10 @@
+import { userController } from "../controller/studentController.js";
+import express from "express";
+const router = express.Router();
+router.get("/", userController.getAllUsers);
+router.get("/teacher-login",userController.teacherLogin);
+ router.post("/teacher-signup",userController.teacherSignup);
+ router.post("/", userController.addUser);
+router.delete("/", userController.deleteUser);
+router.put("/", userController.UpdateUser);
+export { router };
